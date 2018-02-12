@@ -163,8 +163,12 @@ Notifications.localNotificationSchedule = function(details: Object) {
 
 		const iosDetails = {
 			fireDate: details.date.toISOString(),
+			alertTitle: details.title,
 			alertBody: details.message,
+			alertAction: details.alertAction,
+			category: details.category,
 			soundName: soundName,
+			applicationIconBadgeNumber: details.number,
 			userInfo: details.userInfo,
 			repeatInterval: details.repeatType
 		};
